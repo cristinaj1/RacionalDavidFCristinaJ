@@ -9,19 +9,30 @@ package racionalDavidFCristinaJ;
  *
  * @author cristina
  */
-public class RacionalDavidFCristinaJ {
+public class Racional {
+
     int numerador;
     int denominador;
 
-    public RacionalDavidFCristinaJ() {
+    public Racional() {
         this.numerador = 1;
         this.denominador = 1;
     }
 
-    public RacionalDavidFCristinaJ(int numerador, int denominador) {
+    public Racional(int numerador, int denominador) {
         this.numerador = numerador;
         this.denominador = denominador;
+        if (denominador == 0) {
+            denominador = 1;
+        }
     }
-    
-    
+
+    public int getNumerador() {
+        return numerador;
+    }
+
+    public int getDenominador() {
+        return denominador;
+    }
+
 }
