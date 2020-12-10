@@ -26,10 +26,16 @@ public class AppRacional {
         System.out.println("El racional z es " + z.numerador + "/" + z.denominador
                 + " el k es " + k.numerador + "/" + k.denominador
                 + " y p es " + p.numerador + "/" + p.denominador);
+
         System.out.println("Si comparamos: " + z.numerador + "/" + z.denominador
-                + " Y " + k.numerador2 +"/" + k.denominador2);
+                + " Y " + k.numerador2 + "/" + k.denominador2);
         z.igualdad(z.numerador, z.denominador, k.numerador2, k.denominador2);
-        
+
+        z.Suma(z.numerador, z.denominador, k.numerador2, k.denominador2);
+        int suma = ((z.numerador * k.denominador2 + k.numerador2 * z.denominador)
+                / z.denominador * k.denominador2);
+        System.out.println("La suma de z y k es igual a " + suma);
+
     }
 
 }
