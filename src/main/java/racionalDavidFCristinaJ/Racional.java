@@ -34,5 +34,8 @@ public class Racional {
     public int getDenominador() {
         return denominador;
     }
-
+    public void imprimirConsola(){
+        System.out.println("Numero racional: " + numerador + "/" + denominador);
+    
+    }
 }
