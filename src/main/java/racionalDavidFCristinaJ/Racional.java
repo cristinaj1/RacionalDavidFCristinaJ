@@ -13,11 +13,13 @@ import java.util.Random;
  */
 public class Racional {
 
+    //Aquí están la variables
     int numerador;
     int denominador;
     int numerador2;
     int denominador2;
 
+    //Constructor inicializado.
     public Racional() {
         this.numerador = 1;
         this.denominador = 1;
@@ -25,6 +27,7 @@ public class Racional {
         this.denominador2 = 1;
     }
 
+    //Constructor con limitaciones
     public Racional(int numerador, int denominador, int numerador2, int denominador2) {
         this.numerador = numerador;
         this.denominador = denominador;
@@ -39,6 +42,7 @@ public class Racional {
         }
     }
 
+    //Getters
     public int getNumerador() {
         return numerador;
     }
@@ -55,11 +59,14 @@ public class Racional {
         return denominador2;
     }
 
+    //Este método nos ayuda a imprimir por consola.
     public void imprimirConsola() {
         System.out.println("Numero racional: " + numerador + "/" + denominador);
 
     }
 
+    //Método to Stringpara que se puedan ver los constructores y lo valores
+    //de las variables por consola
     @Override
     public String toString() {
         return "Racional{" + "a = " + numerador + ", b = " + denominador + '}';
@@ -75,6 +82,8 @@ public class Racional {
         denominador = this.denominador;
         numerador2 = this.numerador2;
         denominador2 = this.denominador2;
+
+        //Esto es debido a que hay dos tipos de suma
         if (denominador == denominador2) {
             resultado = (numerador + numerador2);
             resultado2 = denominador;
@@ -93,7 +102,8 @@ public class Racional {
         denominador = this.denominador;
         numerador2 = this.numerador2;
         denominador2 = this.denominador2;
-        //Aquí ponemos los condicionales donde 
+
+        //Aquí ponemos los condicionales debido a que hay dos tipos de resta.
         if (denominador == denominador2) {
             resultado = (numerador - numerador2);
             resultado2 = denominador;
@@ -113,6 +123,7 @@ public class Racional {
         numerador2 = this.numerador2;
         denominador2 = this.denominador2;
 
+        //Calculamos la multiplicación
         resultado = (numerador *= numerador2);
         resultado2 = (denominador *= denominador2);
 
@@ -128,35 +139,41 @@ public class Racional {
         numerador2 = this.numerador2;
         denominador2 = this.denominador2;
 
-        resultado = (numerador *= denominador2);
-        resultado2 = (denominador *= numerador2);
+        //Aquí indicamos la división
+        resultado = (numerador /= denominador2);
+        resultado2 = (denominador /= numerador2);
+        System.out.println("El resultado es: " + resultado + "/"+ resultado2);
         return resultado;
 
     }
+
     //Parte comprobacion de igualdad
-      public boolean igualdad(int numerador, int denominador, int numerador2, int denominador2) {
+    public boolean igualdad(int numerador, int denominador, int numerador2, int denominador2) {
         boolean resultado;
         numerador = this.numerador;
         denominador = this.denominador;
         numerador2 = this.numerador2;
         denominador2 = this.denominador2;
-        
+
+        //Lo hacemos mediante if debido a que así es más sencillo
         if (numerador / denominador == numerador2 / denominador2) {
             System.out.println("Los racionales son iguales entre si");
-            resultado=true;
-        }else{
+            resultado = true;
+        } else {
             System.out.println("Los racionales no son iguales entre si");
-            resultado=false;
+            resultado = false;
         }
         return resultado;
     }
 
+    //Parte aletoria
     public int aleatorio() {
         numerador = this.numerador;
         denominador = this.denominador;
-        Random random= new Random();
-        int randomNumerador= random.nextInt();
-        int randomDenominador= random.nextInt();
+        Random random = new Random();
+        int randomNumerador = random.nextInt();
+        int randomDenominador = random.nextInt();
+        //Aquñi lo limitamos.
         return random.nextInt(10);
 
     }
