@@ -10,5 +10,18 @@ package racionalDavidFCristinaJ;
  * @author cristina
  */
 public class RacionalDavidFCristinaJ {
+    int numerador;
+    int denominador;
+
+    public RacionalDavidFCristinaJ() {
+        this.numerador = 1;
+        this.denominador = 1;
+    }
+
+    public RacionalDavidFCristinaJ(int numerador, int denominador) {
+        this.numerador = numerador;
+        this.denominador = denominador;
+    }
+    
     
 }
