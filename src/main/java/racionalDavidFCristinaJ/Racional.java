@@ -64,30 +64,43 @@ public class Racional {
     }
 
     public int Suma(int numerador, int denominador, int numerador2, int denominador2) {
-        int resultado = 0;
+        int resultado;
         numerador = this.numerador;
         denominador = this.denominador;
         numerador2 = this.numerador2;
         denominador2 = this.denominador2;
         if (denominador == denominador2) {
-            resultado = (numerador + numerador2)/denominador;
+            resultado = (numerador + numerador2) / denominador;
         } else {
-            resultado = (numerador * denominador2 + numerador2 * denominador)/(denominador * denominador2);
+            resultado = (numerador * denominador2 + numerador2 * denominador) / (denominador * denominador2);
         }
         return resultado;
     }
+
     public int resta(int numerador, int denominador, int numerador2, int denominador2) {
-        int resultado = 0;
+        int resultado;
         numerador = this.numerador;
         denominador = this.denominador;
         numerador2 = this.numerador2;
         denominador2 = this.denominador2;
         //Aquí ponemos los condicionales donde 
         if (denominador == denominador2) {
-            resultado = (numerador - numerador2)/denominador;
+            resultado = (numerador - numerador2) / denominador;
         } else {
-            resultado = (numerador * denominador2 + numerador2 * denominador)/(denominador * denominador2);
+            resultado = (numerador * denominador2 + numerador2 * denominador) / (denominador * denominador2);
         }
+        return resultado;
+    }
+
+    public int producto(int numerador, int denominador, int numerador2, int denominador2) {
+        int resultado;
+        numerador = this.numerador;
+        denominador = this.denominador;
+        numerador2 = this.numerador2;
+        denominador2 = this.denominador2;
+
+        resultado = (numerador * numerador2 / denominador * denominador2);
+
         return resultado;
     }
 }
