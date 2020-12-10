@@ -62,7 +62,7 @@ public class Racional {
     public String toString() {
         return "Racional{" + "a = " + numerador + ", b = " + denominador + '}';
     }
-
+    //Parte suma
     public int Suma(int numerador, int denominador, int numerador2, int denominador2) {
         int resultado;
         numerador = this.numerador;
@@ -76,7 +76,7 @@ public class Racional {
         }
         return resultado;
     }
-
+    //Parte resta
     public int resta(int numerador, int denominador, int numerador2, int denominador2) {
         int resultado;
         numerador = this.numerador;
@@ -91,7 +91,7 @@ public class Racional {
         }
         return resultado;
     }
-
+    //Parte producto
     public int producto(int numerador, int denominador, int numerador2, int denominador2) {
         int resultado;
         numerador = this.numerador;
@@ -99,7 +99,19 @@ public class Racional {
         numerador2 = this.numerador2;
         denominador2 = this.denominador2;
 
-        resultado = (numerador * numerador2 / denominador * denominador2);
+        resultado = (numerador *= numerador2) / (denominador *= denominador2);
+
+        return resultado;
+    }
+    //Parte división
+    public int division(int numerador, int denominador, int numerador2, int denominador2) {
+        int resultado;
+        numerador = this.numerador;
+        denominador = this.denominador;
+        numerador2 = this.numerador2;
+        denominador2 = this.denominador2;
+
+        resultado = (numerador *= denominador2) / (denominador *= numerador2);
 
         return resultado;
     }
