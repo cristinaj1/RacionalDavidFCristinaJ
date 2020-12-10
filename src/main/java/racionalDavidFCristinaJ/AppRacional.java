@@ -26,7 +26,10 @@ public class AppRacional {
         System.out.println("El racional z es " + z.numerador + "/" + z.denominador
                 + " el k es " + k.numerador + "/" + k.denominador
                 + " y p es " + p.numerador + "/" + p.denominador);
-       
+        System.out.println("Si comparamos: " + z.numerador + "/" + z.denominador
+                + " Y " + k.numerador2 +"/" + k.denominador2);
+        z.igualdad(z.numerador, z.denominador, k.numerador2, k.denominador2);
+        
     }
 
 }
