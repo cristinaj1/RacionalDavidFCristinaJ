@@ -10,25 +10,25 @@ package racionalDavidFCristinaJ;
  * @author cristina
  */
 public class Racional {
-
+    
     int numerador;
     int denominador;
     int numerador2;
     int denominador2;
-
+    
     public Racional() {
         this.numerador = 1;
         this.denominador = 1;
         this.numerador2 = 1;
         this.denominador2 = 1;
     }
-
+    
     public Racional(int numerador, int denominador, int numerador2, int denominador2) {
         this.numerador = numerador;
         this.denominador = denominador;
         this.numerador2 = numerador2;
         this.denominador2 = denominador2;
-
+        
         if (denominador == 0) {
             denominador = 1;
         }
@@ -36,32 +36,33 @@ public class Racional {
             denominador2 = 1;
         }
     }
-
+    
     public int getNumerador() {
         return numerador;
     }
-
+    
     public int getDenominador() {
         return denominador;
     }
-
+    
     public int getNumerador2() {
         return numerador2;
     }
-
+    
     public int getDenominador2() {
         return denominador2;
     }
-
+    
     public void imprimirConsola() {
         System.out.println("Numero racional: " + numerador + "/" + denominador);
-
+        
     }
-
+    
     @Override
     public String toString() {
         return "Racional{" + "a = " + numerador + ", b = " + denominador + '}';
     }
+
     //Parte suma
     public int Suma(int numerador, int denominador, int numerador2, int denominador2) {
         int resultado;
@@ -76,6 +77,7 @@ public class Racional {
         }
         return resultado;
     }
+
     //Parte resta
     public int resta(int numerador, int denominador, int numerador2, int denominador2) {
         int resultado;
@@ -91,6 +93,7 @@ public class Racional {
         }
         return resultado;
     }
+
     //Parte producto
     public int producto(int numerador, int denominador, int numerador2, int denominador2) {
         int resultado;
@@ -98,11 +101,12 @@ public class Racional {
         denominador = this.denominador;
         numerador2 = this.numerador2;
         denominador2 = this.denominador2;
-
+        
         resultado = (numerador *= numerador2) / (denominador *= denominador2);
-
+        
         return resultado;
     }
+
     //Parte división
     public int division(int numerador, int denominador, int numerador2, int denominador2) {
         int resultado;
@@ -110,9 +114,23 @@ public class Racional {
         denominador = this.denominador;
         numerador2 = this.numerador2;
         denominador2 = this.denominador2;
-
+        
         resultado = (numerador *= denominador2) / (denominador *= numerador2);
-
+        
         return resultado;
+    }
+    
+    public void igualdad(int numerador, int denominador, int numerador2, int denominador2) {
+        numerador = this.numerador;
+        denominador = this.denominador;
+        numerador2 = this.numerador2;
+        denominador2 = this.denominador2;
+        
+        if (numerador / denominador == numerador2 / denominador2) {
+            System.out.println("Los racionales son iguales entre si");
+        }else{
+            System.out.println("Los racionales no son iguales entre si");
+        }
+    
     }
 }
