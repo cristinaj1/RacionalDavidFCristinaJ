@@ -10,15 +10,23 @@ package racionalDavidFCristinaJ;
  * @author Cris
  */
 public class AppRacional {
+
     public static void main(String[] args) {
         Racional z = new Racional();
         Racional k = new Racional();
-        z.numerador=4;
-        z.denominador= 5;
-        k.numerador2= 3;
-        k.denominador2=4;
-        
-        
+        Racional p = new Racional();
+        z.numerador = 4;
+        z.denominador = 5;
+        k.numerador2 = 3;
+        k.denominador2 = 4;
+
+        p.denominador = p.aleatorio();
+        p.numerador = p.aleatorio();
+
+        System.out.println("El racional z es " + z.numerador + "/" + z.denominador
+                + " el k es " + k.numerador + "/" + k.denominador
+                + " y p es " + p.numerador + "/" + p.denominador);
+       
     }
-    
+
 }

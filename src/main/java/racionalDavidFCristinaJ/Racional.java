@@ -133,28 +133,31 @@ public class Racional {
         return resultado;
 
     }
-
-    public void igualdad(int numerador, int denominador, int numerador2, int denominador2) {
+    //Parte comprobacion de igualdad
+      public boolean igualdad(int numerador, int denominador, int numerador2, int denominador2) {
+        boolean resultado;
         numerador = this.numerador;
         denominador = this.denominador;
         numerador2 = this.numerador2;
         denominador2 = this.denominador2;
-
+        
         if (numerador / denominador == numerador2 / denominador2) {
             System.out.println("Los racionales son iguales entre si");
-        } else {
+            resultado=true;
+        }else{
             System.out.println("Los racionales no son iguales entre si");
+            resultado=false;
         }
-
+        return resultado;
     }
 
-    public int aleatorio(int numerador, int denominador, int numerador2, int denominador2) {
+    public int aleatorio() {
         numerador = this.numerador;
         denominador = this.denominador;
         Random random= new Random();
         int randomNumerador= random.nextInt();
         int randomDenominador= random.nextInt();
-        return random.nextInt();
+        return random.nextInt(10);
 
     }
 }
